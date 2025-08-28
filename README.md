@@ -1,1 +1,1 @@
-# Desafio-de-projeto-criando-um-sistema-banc-rio
+# Desafio-de-projeto-criando-um-sistema-bancário
