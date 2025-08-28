@@ -48,4 +48,6 @@ Saldo atual: R$50.00
 
 ====================
 
+=> 0
+
 Sessão finalizada. Obrigado por ser nosso cliente!
