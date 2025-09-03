@@ -40,3 +40,66 @@ Ele permite criar usuários, criar contas, realizar depósitos, saques e consult
 6. No terminal do VS Code, execute:  
    ```bash
    python sistema_bancario.py
+
+## 📌 Exemplo de uso completo   
+[1] Criar novo usuário
+
+[2] Criar nova conta
+
+[3] Depositar
+
+[4] Sacar
+
+[5] Extrato
+
+[0] Sair
+
+
+=> 1
+
+Digite seu CPF (qualquer número serve): 000.000.000-00
+
+Digite seu nome e sobrenome: João Teste
+
+Digite sua data de nascimento (dd-mm-aaaa): 01-01-2000
+
+Informe o endereço: Rua Fictícia, 123, Bairro Exemplo, Cidade/UF
+
+===== Usuário criado com sucesso! =====
+
+
+=> 2
+
+Digite o CPF do usuário: 000.000.000-00
+
+===== Conta criada com sucesso! =====
+
+
+=> 3
+
+Informe o valor do depósito: 500
+
+===== Depósito efetuado com sucesso! =====
+
+
+=> 4
+
+Informe o valor do saque: 200
+
+===== Saque efetuado com sucesso! =====
+
+
+=> 5
+
+========== EXTRATO ==========
+
+Depósito: R$500.00
+
+Saque: R$200.00
+
+Saldo: R$300.00
+
+
+=> 0
+
+Sessão finalizada. Obrigado por ser nosso cliente!
