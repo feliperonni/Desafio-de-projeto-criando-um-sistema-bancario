@@ -1,7 +1,7 @@
 # 🏦 Sistema Bancário em Python
 
 Este projeto é um **simulador de banco**, desenvolvido como exercício prático de lógica de programação em Python utilizando **Programação Orientada a Objetos (POO)**.  
-Ele permite criar usuários, criar contas, realizar depósitos, saques e consultar extratos, **sem precisar de dados reais**.  
+Ele permite criar usuários com validação da data de nascimento e cpf, criar contas, realizar depósitos, saques e consultar extratos. 
 
 ---
 
