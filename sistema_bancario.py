@@ -179,7 +179,14 @@ def menu():
 => """
     return input(menu_texto)
 
-
+def data_nascimento_valida(data_str: str) -> bool:
+    try:
+        nascimento = datetime.strptime(data_str, "%d-%m-%Y")
+    except ValueError:
+       
+        return False
+    return True
+    
 def criar_cliente(clientes):
     cpf = input('Informe seu CPF:\n')
     cliente = filtrar_cliente(cpf, clientes)
@@ -189,7 +196,12 @@ def criar_cliente(clientes):
         return
 
     nome = input('Digite seu nome e Sobrenome\n')
-    data_nascimento = input('Digite sua data de nascimento (dd-mm-aaaa)\n')
+
+    while True:
+        data_nascimento = input('Digite sua data de nascimento (dd-mm-aaaa)\n')
+        if data_nascimento_valida(data_nascimento):
+            break
+        print('*** Data de nascimento inválida! Tente novamente. ***')`
     endereco = input('Informe seu endereço: \n')
 
     cliente = PessoaFisica(nome=nome, data_nascimento=data_nascimento, cpf=cpf, endereco=endereco)
@@ -308,3 +320,4 @@ def main():
 
 
 main()
+
