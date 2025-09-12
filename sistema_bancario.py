@@ -13,7 +13,6 @@ class Cliente:
     def adicionar_contas(self, conta):
         self.contas.append(conta)
 
-
 class PessoaFisica(Cliente):
     def __init__(self, cpf, nome, data_nascimento, endereco):
         super().__init__(endereco)
@@ -338,6 +337,7 @@ def main():
 
 
 main()
+
 
 
 
