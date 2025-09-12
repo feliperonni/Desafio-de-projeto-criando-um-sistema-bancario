@@ -13,7 +13,6 @@ class Cliente:
     def adicionar_contas(self, conta):
         self.contas.append(conta)
 
-
 class PessoaFisica(Cliente):
     def __init__(self, cpf, nome, data_nascimento, endereco):
         super().__init__(endereco)
@@ -79,7 +78,6 @@ class Conta:
         
         return True
 
-
 class ContaCorrente(Conta):
     def __init__(self, numero, cliente, limite=1000, limite_saques=3):
         super().__init__(numero, cliente)
@@ -110,7 +108,6 @@ C/C:\t\t{self.numero}
 Titular:\t{self.cliente.nome}
 """
 
-
 class Historico:
     def __init__(self):
         self._transacoes = []
@@ -128,7 +125,6 @@ class Historico:
             }
         )
     
-
 class Transacao(ABC):
     @property
     @abstractmethod
@@ -341,5 +337,7 @@ def main():
 
 
 main()
+
+
 
 
