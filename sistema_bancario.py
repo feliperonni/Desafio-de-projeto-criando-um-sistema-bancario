@@ -1,3 +1,4 @@
+import re
 from abc import ABC, abstractmethod
 from datetime import datetime
 
@@ -186,9 +187,29 @@ def data_nascimento_valida(data_str: str) -> bool:
        
         return False
     return True
-    
+
+def cpf_valido(cpf: str) -> bool:
+    cpf = re.sub(r'\D', '', cpf)  # Remove pontuação
+
+    if len(cpf) != 11 or cpf == cpf[0] * 11:
+        return False
+
+    def calcula_digito(cpf_parcial, peso_inicial):
+        soma = sum(int(digito) * peso for digito, peso in zip(cpf_parcial, range(peso_inicial, 1, -1)))
+        resto = soma % 11
+        return '0' if resto < 2 else str(11 - resto)
+
+    digito1 = calcula_digito(cpf[:9], 10)
+    digito2 = calcula_digito(cpf[:10], 11)
+
+    return cpf[-2:] == digito1 + digito2
+
 def criar_cliente(clientes):
-    cpf = input('Informe seu CPF:\n')
+    while True:
+        cpf = input('Informe seu CPF:\n')
+        if cpf_valido(cpf):
+            break
+        print('*** CPF inválido! Tente novamente. ***')
     cliente = filtrar_cliente(cpf, clientes)
 
     if cliente:
@@ -320,4 +341,5 @@ def main():
 
 
 main()
+
 
