@@ -185,7 +185,7 @@ def data_nascimento_valida(data_str: str) -> bool:
     return True
 
 def cpf_valido(cpf: str) -> bool:
-    cpf = re.sub(r'\D', '', cpf)  # Remove pontuação
+    cpf = re.sub(r'\D', '', cpf)
 
     if len(cpf) != 11 or cpf == cpf[0] * 11:
         return False
@@ -337,6 +337,7 @@ def main():
 
 
 main()
+
 
 
 
